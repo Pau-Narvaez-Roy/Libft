@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 12:18:50 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/18 12:20:01 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/05/25 09:26:26 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	while (*str)
-	{
-		if ((*str < '0' || *str > '9'))
-			return (0);
-		str++;
-	}
+	if ((c < '0' || c > '9'))
+		return (0);
 	return (1);
 }
-
