@@ -3,31 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 12:14:32 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/22 08:23:08 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/05/25 09:44:14 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	while (*str)
-	{
-		if ((*str < 'a' || *str > 'z') && (*str < 'A' || *str > 'Z'))
-			return (0);
-		str++;
-	}
+	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
+		return (0);
 	return (1);
-}
-
-int main(void)
-{
-	#include <stdio.h>
-	#include <ctype.h>
-	
-	printf("%d", ft_isalpha("a"));
-	printf("\n");
-	printf("%d", isalpha(300));
-	return (0);
 }
