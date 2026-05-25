@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 10:44:27 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/25 11:01:24 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/05/25 11:33:42 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	size;
 
 	size = 0;
-	while (*s)
-	{
+	while (*s++)
 		size++;
-		s++;
-	}
 	return (size);
 }
