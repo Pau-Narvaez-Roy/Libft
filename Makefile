@@ -6,13 +6,15 @@
 #    By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/19 16:26:53 by pnarvaez          #+#    #+#              #
-#    Updated: 2026/05/25 09:39:39 by pnarvaez         ###   ########.fr        #
+#    Updated: 2026/05/25 17:09:19 by pnarvaez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SOURCES = ./ft_isalpha.c
+SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
+		  ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c\
+		  ft_strlcpy.c ft_strlcat\
 
 OBJECTS = $(SOURCES:.c=.o)
 
