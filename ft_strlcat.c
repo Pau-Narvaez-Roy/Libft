@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:06:17 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/27 11:42:55 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/05/27 11:45:16 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[len] = '\0';
 	return (dstlen + srcdstlen);
 }
-
-/*int	main(int argc, char **argv)
-{
-	#include <stdio.h>
-	#include <string.h>
-
-	printf("%ld\n", ft_strlcat(argv[1], argv[2], 7));
-	printf("%s\n", argv[1]);
-	printf("%s\n", argv[2]);
-	printf("%ld\n", strlcat(argv[3], argv[4], 7));
-	printf("%s\n", argv[3]);
-	printf("%s\n", argv[4]);
-	return (0);
-}*/
