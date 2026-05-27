@@ -57,3 +57,23 @@
 	printf("%s\n", argv[4]);
 	return (0);
 }*/
+
+//strchr strrchar
+/*int	main(int argc, char **argv)
+{
+	#include <stdio.h>
+
+	printf("%s\n", ft_strchr(argv[1], '\0'));
+	return (0);
+}*/
+
+//strnstr
+/*int	main(int argc, char **argv)
+{
+	#include <stdio.h>
+	#include <string.h>
+
+	printf("%s\n", ft_strnstr(argv[1], argv[2], 15));
+	//printf("%s\n", strnstr(argv[1], argv[2], 3));
+	return (0);
+}*/
