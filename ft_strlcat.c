@@ -6,20 +6,49 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:06:17 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/25 17:15:15 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/05/27 11:42:55 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	ft_strdstlen(const char *s)
+{
+	size_t	size;
+
+	size = 0;
+	while (*s++)
+		size++;
+	return (size);
+}
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	dstlen;
+	size_t	srcdstlen;
 	size_t	len;
 
-	len = 0;
-	while (dst[len])
-		dst[len++];
+	dstlen = ft_strdstlen(dst);
+	srcdstlen = ft_strdstlen(src);
+	len = dstlen;
+	if (size <= dstlen)
+		return (size + srcdstlen);
 	while ((size - len - 1) && *src)
-		dst[len++] = *src;
-	dst
+		dst[len++] = *src++;
+	dst[len] = '\0';
+	return (dstlen + srcdstlen);
 }
+
+/*int	main(int argc, char **argv)
+{
+	#include <stdio.h>
+	#include <string.h>
+
+	printf("%ld\n", ft_strlcat(argv[1], argv[2], 7));
+	printf("%s\n", argv[1]);
+	printf("%s\n", argv[2]);
+	printf("%ld\n", strlcat(argv[3], argv[4], 7));
+	printf("%s\n", argv[3]);
+	printf("%s\n", argv[4]);
+	return (0);
+}*/
