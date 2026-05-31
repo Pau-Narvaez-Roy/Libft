@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 11:47:41 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/27 11:54:44 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/05/31 18:03:34 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-/*int	main(void)
-{
-	#include <stdio.h>
-
-	printf("%d\n", ft_toupper('a'));
-	return (0);
-}*/
