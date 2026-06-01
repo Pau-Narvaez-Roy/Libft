@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 16:14:04 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/27 17:11:14 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/01 18:08:54 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char		*str;
-	char		*to_find;
-	size_t		i;
-	size_t		j;
-	size_t		max;
+	char				*str;
+	char				*to_find;
+	unsigned int		i;
+	unsigned int		j;
+	unsigned int		max;
 
 	str = (char *) big;
 	to_find = (char *) little;
