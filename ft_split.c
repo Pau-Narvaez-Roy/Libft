@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 18:36:29 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/02 12:08:33 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/02 14:51:56 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,14 @@ static char const	*ft_nextword(char const *s, char c)
 	return (s);
 }
 
+static char	**ft_free(char **list, unsigned int size)
+{
+	while (size)
+		free(list[size--]);
+	free(list);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char			**list;
@@ -71,12 +79,12 @@ char	**ft_split(char const *s, char c)
 		s = ft_nextword(s, c);
 		list[i] = (char *) malloc(sizeof(char) * (ft_len(s, c) + 1));
 		if (!list[i])
-			return (NULL);
+			return (ft_free(list, words));
 		j = 0;
 		while (*s && *s != c)
 			list[i][j++] = *s++;
 		list[i++][j] = '\0';
 	}
-	list[i] = (char *) 0;
+	list[i] = '\0';
 	return (list);
 }
