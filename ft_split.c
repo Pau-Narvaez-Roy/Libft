@@ -6,12 +6,11 @@
 /*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 18:36:29 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/02 12:02:43 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/02 12:08:33 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static unsigned int	ft_numrow(char const *s, char c)
 {
@@ -81,18 +80,3 @@ char	**ft_split(char const *s, char c)
 	list[i] = (char *) 0;
 	return (list);
 }
-
-/*int	main(int argc, char **argv)
-{
-	unsigned int	i;
-	char			**list;
-
-	list = ft_split(argv[1], argv[2][0]);
-	i = 0;
-	while (list[i])
-	{
-		printf("Final: %d %s\n", i, list[i]);
-		i++;
-	}
-	return (0);
-}*/
