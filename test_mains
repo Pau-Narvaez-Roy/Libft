@@ -77,3 +77,19 @@
 	//printf("%s\n", strnstr(argv[1], argv[2], 3));
 	return (0);
 }*/
+
+//split
+/*int	main(int argc, char **argv)
+{
+	unsigned int	i;
+	char			**list;
+
+	list = ft_split(argv[1], argv[2][0]);
+	i = 0;
+	while (list[i])
+	{
+		printf("Final: %d %s\n", i, list[i]);
+		i++;
+	}
+	return (0);
+}*/
