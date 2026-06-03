@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+         #
+#    By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/19 16:26:53 by pnarvaez          #+#    #+#              #
-#    Updated: 2026/06/02 17:51:15 by pnarvaez         ###   ########.fr        #
+#    Updated: 2026/06/03 11:11:56 by pnarvaez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 		  ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
 		  ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 		  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
-		  ft_putchar_fd.c ft_putstr_fd.c\
+		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
 OBJECTS = $(SOURCES:.c=.o)
 

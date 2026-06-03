@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 09:41:25 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/02 17:51:01 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/03 11:11:18 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
