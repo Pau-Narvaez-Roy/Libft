@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnarvaez <pnarvaez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 18:36:29 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/02 14:51:56 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/04 14:06:59 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ static char	**ft_free(char **list, unsigned int size)
 {
 	while (size)
 		free(list[size--]);
+	free(list[size]);
 	free(list);
 	return (NULL);
 }
@@ -79,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		s = ft_nextword(s, c);
 		list[i] = (char *) malloc(sizeof(char) * (ft_len(s, c) + 1));
 		if (!list[i])
-			return (ft_free(list, words));
+			return (ft_free(list, i));
 		j = 0;
 		while (*s && *s != c)
 			list[i][j++] = *s++;
