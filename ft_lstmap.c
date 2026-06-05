@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 15:59:19 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/04 16:29:53 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/05 08:29:00 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*lst_head;
 	t_list	*lst_new;
+	void	*content;
 
 	lst_head = NULL;
 	while (lst)
 	{
-		lst_new = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		lst_new = ft_lstnew(content);
 		if (!lst_new)
 		{
-			ft_lstdelone(lst_new, del);
+			del(content);
 			ft_lstclear(&lst_head, del);
 			return (NULL);
 		}
