@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+         #
+#    By: pnarvaez <pnarvaez@student.42.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/19 16:26:53 by pnarvaez          #+#    #+#              #
-#    Updated: 2026/06/04 16:01:09 by pnarvaez         ###   ########.fr        #
+#    Updated: 2026/06/05 08:54:08 by pnarvaez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re:	fclean all
-
-bonus: all
 
 .PHONY: all clean fclean re
