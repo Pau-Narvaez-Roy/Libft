@@ -1,0 +1,676 @@
+================================================================================
+LIBFT TEST MAINS - Pruebas unitarias para cada función
+================================================================================
+
+// ============================================================================
+// FUNCIONES DE VALIDACIÓN DE CARACTERES
+// ============================================================================
+
+/* TEST: ft_isalpha.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_isalpha tests:\n");
+	printf("ft_isalpha('a'): %d (expected: 1)\n", ft_isalpha('a'));
+	printf("ft_isalpha('Z'): %d (expected: 1)\n", ft_isalpha('Z'));
+	printf("ft_isalpha('5'): %d (expected: 0)\n", ft_isalpha('5'));
+	printf("ft_isalpha(' '): %d (expected: 0)\n", ft_isalpha(' '));
+	return (0);
+}
+
+/* TEST: ft_isdigit.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_isdigit tests:\n");
+	printf("ft_isdigit('5'): %d (expected: 1)\n", ft_isdigit('5'));
+	printf("ft_isdigit('0'): %d (expected: 1)\n", ft_isdigit('0'));
+	printf("ft_isdigit('a'): %d (expected: 0)\n", ft_isdigit('a'));
+	printf("ft_isdigit(' '): %d (expected: 0)\n", ft_isdigit(' '));
+	return (0);
+}
+
+/* TEST: ft_isalnum.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_isalnum tests:\n");
+	printf("ft_isalnum('a'): %d (expected: 1)\n", ft_isalnum('a'));
+	printf("ft_isalnum('5'): %d (expected: 1)\n", ft_isalnum('5'));
+	printf("ft_isalnum(' '): %d (expected: 0)\n", ft_isalnum(' '));
+	printf("ft_isalnum('!'): %d (expected: 0)\n", ft_isalnum('!'));
+	return (0);
+}
+
+/* TEST: ft_isascii.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_isascii tests:\n");
+	printf("ft_isascii(65): %d (expected: 1)\n", ft_isascii(65));
+	printf("ft_isascii(0): %d (expected: 1)\n", ft_isascii(0));
+	printf("ft_isascii(127): %d (expected: 1)\n", ft_isascii(127));
+	printf("ft_isascii(128): %d (expected: 0)\n", ft_isascii(128));
+	return (0);
+}
+
+/* TEST: ft_isprint.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_isprint tests:\n");
+	printf("ft_isprint('a'): %d (expected: 1)\n", ft_isprint('a'));
+	printf("ft_isprint(' '): %d (expected: 1)\n", ft_isprint(' '));
+	printf("ft_isprint(9): %d (expected: 0)\n", ft_isprint(9));
+	printf("ft_isprint(0): %d (expected: 0)\n", ft_isprint(0));
+	return (0);
+}
+
+// ============================================================================
+// FUNCIONES DE CONVERSIÓN DE CARACTERES
+// ============================================================================
+
+/* TEST: ft_toupper.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_toupper tests:\n");
+	printf("ft_toupper('a'): %c (expected: A)\n", ft_toupper('a'));
+	printf("ft_toupper('Z'): %c (expected: Z)\n", ft_toupper('Z'));
+	printf("ft_toupper('5'): %c (expected: 5)\n", ft_toupper('5'));
+	return (0);
+}
+
+/* TEST: ft_tolower.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_tolower tests:\n");
+	printf("ft_tolower('A'): %c (expected: a)\n", ft_tolower('A'));
+	printf("ft_tolower('z'): %c (expected: z)\n", ft_tolower('z'));
+	printf("ft_tolower('5'): %c (expected: 5)\n", ft_tolower('5'));
+	return (0);
+}
+
+// ============================================================================
+// FUNCIONES DE MEMORIA
+// ============================================================================
+
+/* TEST: ft_strlen.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_strlen tests:\n");
+	printf("ft_strlen(\"hello\"): %zu (expected: 5)\n", ft_strlen("hello"));
+	printf("ft_strlen(\"\"): %zu (expected: 0)\n", ft_strlen(""));
+	printf("ft_strlen(\"42\"): %zu (expected: 2)\n", ft_strlen("42"));
+	return (0);
+}
+
+/* TEST: ft_memset.c */
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char buffer[10];
+	ft_memset(buffer, 'A', 5);
+	buffer[5] = '\0';
+	printf("ft_memset tests:\n");
+	printf("Buffer after memset with 'A' x5: %s\n", buffer);
+	return (0);
+}
+
+/* TEST: ft_bzero.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char buffer[10] = "hello";
+	printf("ft_bzero tests:\n");
+	printf("Before bzero: %s\n", buffer);
+	ft_bzero(buffer, 5);
+	printf("After bzero on 5 bytes (first char): %d (expected: 0)\n", buffer[0]);
+	return (0);
+}
+
+/* TEST: ft_memcpy.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char src[] = "hello";
+	char dst[10];
+	ft_memcpy(dst, src, 5);
+	dst[5] = '\0';
+	printf("ft_memcpy tests:\n");
+	printf("Copy 'hello' to dst: %s\n", dst);
+	return (0);
+}
+
+/* TEST: ft_memmove.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char buffer[] = "hello";
+	printf("ft_memmove tests:\n");
+	printf("Original: %s\n", buffer);
+	ft_memmove(buffer + 1, buffer, 4);
+	printf("After memmove (shift right): %s\n", buffer);
+	return (0);
+}
+
+/* TEST: ft_memchr.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char *str = "hello";
+	char *result = (char *)ft_memchr(str, 'l', 5);
+	printf("ft_memchr tests:\n");
+	printf("Finding 'l' in 'hello': %s (expected: llo)\n", result ? result : "not found");
+	return (0);
+}
+
+/* TEST: ft_memcmp.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_memcmp tests:\n");
+	printf("memcmp(\"abc\", \"abc\"): %d (expected: 0)\n", ft_memcmp("abc", "abc", 3));
+	printf("memcmp(\"abc\", \"abd\"): %d (expected: negative)\n", ft_memcmp("abc", "abd", 3));
+	printf("memcmp(\"abd\", \"abc\"): %d (expected: positive)\n", ft_memcmp("abd", "abc", 3));
+	return (0);
+}
+
+// ============================================================================
+// FUNCIONES DE STRINGS
+// ============================================================================
+
+/* TEST: ft_strlcpy.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char dst[10];
+	size_t len = ft_strlcpy(dst, "hello", 10);
+	printf("ft_strlcpy tests:\n");
+	printf("Copy 'hello' to dst: %s (len returned: %zu)\n", dst, len);
+	return (0);
+}
+
+/* TEST: ft_strlcat.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char dst[20] = "hello";
+	size_t len = ft_strlcat(dst, " world", 20);
+	printf("ft_strlcat tests:\n");
+	printf("Concatenate ' world': %s (len returned: %zu)\n", dst, len);
+	return (0);
+}
+
+/* TEST: ft_strchr.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char *str = "hello";
+	char *result = ft_strchr(str, 'l');
+	printf("ft_strchr tests:\n");
+	printf("Finding 'l' in 'hello': %s (expected: llo)\n", result ? result : "not found");
+	return (0);
+}
+
+/* TEST: ft_strrchr.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char *str = "hello";
+	char *result = ft_strrchr(str, 'l');
+	printf("ft_strrchr tests:\n");
+	printf("Finding last 'l' in 'hello': %s (expected: lo)\n", result ? result : "not found");
+	return (0);
+}
+
+/* TEST: ft_strncmp.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_strncmp tests:\n");
+	printf("strncmp(\"abc\", \"abc\", 3): %d (expected: 0)\n", ft_strncmp("abc", "abc", 3));
+	printf("strncmp(\"abc\", \"abd\", 3): %d (expected: negative)\n", ft_strncmp("abc", "abd", 3));
+	return (0);
+}
+
+/* TEST: ft_strnstr.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	char *str = "hello world";
+	char *result = ft_strnstr(str, "world", 11);
+	printf("ft_strnstr tests:\n");
+	printf("Finding 'world' in 'hello world': %s\n", result ? result : "not found");
+	return (0);
+}
+
+/* TEST: ft_atoi.c */
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	printf("ft_atoi tests:\n");
+	printf("ft_atoi(\"123\"): %d (expected: 123)\n", ft_atoi("123"));
+	printf("ft_atoi(\"-456\"): %d (expected: -456)\n", ft_atoi("-456"));
+	printf("ft_atoi(\"  789\"): %d (expected: 789)\n", ft_atoi("  789"));
+	return (0);
+}
+
+/* TEST: ft_strdup.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *original = "hello";
+	char *duplicate = ft_strdup(original);
+	printf("ft_strdup tests:\n");
+	printf("Original: %s, Duplicate: %s\n", original, duplicate);
+	free(duplicate);
+	return (0);
+}
+
+/* TEST: ft_calloc.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int *array = (int *)ft_calloc(5, sizeof(int));
+	printf("ft_calloc tests:\n");
+	printf("Allocated 5 ints, first element: %d (expected: 0)\n", array[0]);
+	free(array);
+	return (0);
+}
+
+// ============================================================================
+// FUNCIONES DE MANIPULACIÓN DE STRINGS
+// ============================================================================
+
+/* TEST: ft_substr.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *result = ft_substr("hello world", 6, 5);
+	printf("ft_substr tests:\n");
+	printf("Substring from 'hello world' start=6 len=5: %s\n", result);
+	free(result);
+	return (0);
+}
+
+/* TEST: ft_strjoin.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *result = ft_strjoin("hello", " world");
+	printf("ft_strjoin tests:\n");
+	printf("Join 'hello' + ' world': %s\n", result);
+	free(result);
+	return (0);
+}
+
+/* TEST: ft_strtrim.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *result = ft_strtrim("  hello world  ", " ");
+	printf("ft_strtrim tests:\n");
+	printf("Trim spaces from '  hello world  ': '%s'\n", result);
+	free(result);
+	return (0);
+}
+
+/* TEST: ft_split.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char **result = ft_split("hello,world,test", ',');
+	printf("ft_split tests:\n");
+	printf("Split 'hello,world,test' by ',': \n");
+	for (int i = 0; result[i]; i++)
+		printf("  [%d]: %s\n", i, result[i]);
+	// Free memory (implement proper cleanup)
+	return (0);
+}
+
+/* TEST: ft_itoa.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	char *result = ft_itoa(42);
+	printf("ft_itoa tests:\n");
+	printf("Convert 42 to string: %s\n", result);
+	free(result);
+	return (0);
+}
+
+/* TEST: ft_strmapi.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+char to_upper(unsigned int i, char c)
+{
+	(void)i;
+	return (c >= 'a' && c <= 'z') ? c - 32 : c;
+}
+
+int main(void)
+{
+	char *result = ft_strmapi("hello", to_upper);
+	printf("ft_strmapi tests:\n");
+	printf("Apply to_upper to 'hello': %s\n", result);
+	free(result);
+	return (0);
+}
+
+/* TEST: ft_striteri.c */
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+
+void print_index(unsigned int i, char *c)
+{
+	printf("Index %u: %c\n", i, *c);
+}
+
+int main(void)
+{
+	char str[] = "hello";
+	printf("ft_striteri tests:\n");
+	ft_striteri(str, print_index);
+	return (0);
+}
+
+// ============================================================================
+// FUNCIONES DE SALIDA CON FILE DESCRIPTOR
+// ============================================================================
+
+/* TEST: ft_putchar_fd.c */
+#include "libft.h"
+
+int main(void)
+{
+	printf("ft_putchar_fd tests:\n");
+	printf("Output 'A' to stdout: ");
+	ft_putchar_fd('A', 1);
+	printf("\n");
+	return (0);
+}
+
+/* TEST: ft_putstr_fd.c */
+#include "libft.h"
+
+int main(void)
+{
+	printf("ft_putstr_fd tests:\n");
+	printf("Output 'hello' to stdout: ");
+	ft_putstr_fd("hello", 1);
+	printf("\n");
+	return (0);
+}
+
+/* TEST: ft_putendl_fd.c */
+#include "libft.h"
+
+int main(void)
+{
+	printf("ft_putendl_fd tests:\n");
+	printf("Output 'hello' with newline to stdout: ");
+	ft_putendl_fd("hello", 1);
+	return (0);
+}
+
+/* TEST: ft_putnbr_fd.c */
+#include "libft.h"
+
+int main(void)
+{
+	printf("ft_putnbr_fd tests:\n");
+	printf("Output 42 to stdout: ");
+	ft_putnbr_fd(42, 1);
+	printf("\n");
+	return (0);
+}
+
+// ============================================================================
+// FUNCIONES DE LISTAS ENLAZADAS
+// ============================================================================
+
+/* TEST: ft_lstnew.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	t_list *node = ft_lstnew("hello");
+	printf("ft_lstnew tests:\n");
+	printf("Created node with content: %s\n", (char *)node->content);
+	free(node);
+	return (0);
+}
+
+/* TEST: ft_lstadd_front.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	t_list *head = ft_lstnew("world");
+	t_list *new = ft_lstnew("hello");
+	ft_lstadd_front(&head, new);
+	printf("ft_lstadd_front tests:\n");
+	printf("First node: %s\n", (char *)head->content);
+	printf("Second node: %s\n", (char *)head->next->content);
+	free(new);
+	free(head);
+	return (0);
+}
+
+/* TEST: ft_lstsize.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	t_list *head = ft_lstnew("a");
+	ft_lstadd_front(&head, ft_lstnew("b"));
+	ft_lstadd_front(&head, ft_lstnew("c"));
+	printf("ft_lstsize tests:\n");
+	printf("List size: %d (expected: 3)\n", ft_lstsize(head));
+	return (0);
+}
+
+/* TEST: ft_lstlast.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	t_list *head = ft_lstnew("a");
+	ft_lstadd_back(&head, ft_lstnew("b"));
+	ft_lstadd_back(&head, ft_lstnew("c"));
+	t_list *last = ft_lstlast(head);
+	printf("ft_lstlast tests:\n");
+	printf("Last node content: %s\n", (char *)last->content);
+	return (0);
+}
+
+/* TEST: ft_lstadd_back.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	t_list *head = ft_lstnew("hello");
+	ft_lstadd_back(&head, ft_lstnew("world"));
+	printf("ft_lstadd_back tests:\n");
+	printf("First: %s, Second: %s\n", (char *)head->content, (char *)head->next->content);
+	return (0);
+}
+
+/* TEST: ft_lstdelone.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+void del(void *content)
+{
+	free(content);
+}
+
+int main(void)
+{
+	t_list *node = ft_lstnew(malloc(10));
+	printf("ft_lstdelone tests:\n");
+	printf("Deleting single node...\n");
+	ft_lstdelone(node, del);
+	return (0);
+}
+
+/* TEST: ft_lstclear.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+void del(void *content)
+{
+	(void)content;
+}
+
+int main(void)
+{
+	t_list *head = ft_lstnew("a");
+	ft_lstadd_back(&head, ft_lstnew("b"));
+	printf("ft_lstclear tests:\n");
+	printf("Clearing list...\n");
+	ft_lstclear(&head, del);
+	printf("Head is now NULL: %d\n", head == NULL);
+	return (0);
+}
+
+/* TEST: ft_lstiter.c */
+#include "libft.h"
+#include <stdio.h>
+
+void print_content(void *content)
+{
+	printf("%s ", (char *)content);
+}
+
+int main(void)
+{
+	t_list *head = ft_lstnew("a");
+	ft_lstadd_back(&head, ft_lstnew("b"));
+	ft_lstadd_back(&head, ft_lstnew("c"));
+	printf("ft_lstiter tests:\n");
+	printf("Iterating list: ");
+	ft_lstiter(head, print_content);
+	printf("\n");
+	return (0);
+}
+
+/* TEST: ft_lstmap.c */
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+void *duplicate(void *content)
+{
+	char *str = (char *)content;
+	char *dup = malloc(10);
+	int i = 0;
+	while (str[i])
+	{
+		dup[i] = str[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
+void del(void *content)
+{
+	free(content);
+}
+
+int main(void)
+{
+	t_list *head = ft_lstnew("a");
+	ft_lstadd_back(&head, ft_lstnew("b"));
+	t_list *new_list = ft_lstmap(head, duplicate, del);
+	printf("ft_lstmap tests:\n");
+	printf("New list first: %s\n", (char *)new_list->content);
+	return (0);
+}
+
+================================================================================
+END OF TEST MAINS
+================================================================================
