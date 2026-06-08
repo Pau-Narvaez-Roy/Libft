@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 17:50:21 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/03 11:02:04 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/08 15:38:09 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		write(fd, &*s++, 1);
 }
