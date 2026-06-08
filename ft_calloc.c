@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 17:59:51 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/31 18:35:17 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/08 15:55:06 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmeb, size_t size)
 	char	*str;
 	size_t	i;
 
+	if (nmeb != 0 && (size > (((size_t) - 1) / nmeb)))
+		return (NULL);
 	ptr = (void *) malloc(nmeb * size);
 	if (!ptr)
 		return (NULL);
