@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 16:32:15 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/05/25 17:05:44 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/08 12:48:58 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (size <= 0)
 		return (srcsize);
 	while (((size--) - 1) && *src)
-	{
 		*dst++ = *src++;
-	}
 	*dst = '\0';
 	return (srcsize);
 }
