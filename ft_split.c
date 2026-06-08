@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 18:36:29 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/04 14:06:59 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/08 15:30:50 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ char	**ft_split(char const *s, char c)
 			list[i][j++] = *s++;
 		list[i++][j] = '\0';
 	}
-	list[i] = '\0';
+	list[i] = NULL;
 	return (list);
 }
