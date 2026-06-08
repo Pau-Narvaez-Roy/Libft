@@ -262,22 +262,6 @@ typedef struct s_list
 
 - **Linux man pages**: `man strlen`, `man memcpy`, `man malloc`, etc.
   - Referencia: https://man7.org/linux/man-pages/
-- **C Standard Library Documentation**: https://en.cppreference.com/w/c/string
-- **GCC Documentation**: https://gcc.gnu.org/onlinedocs/
-
-### Referencias Clásicas
-
-- **"The C Programming Language"** (Kernighan & Ritchie): Fundamentos de C
-- **"Expert C Programming"** (Peter van der Linden): Técnicas avanzadas
-- **"Understanding and Using C Pointers"** (Richard Reese): Gestión de punteros y memoria
-- **POSIX Standard**: https://pubs.opengroup.org/onlinepubs/9699919799/
-
-### Tutoriales y Artículos
-
-- **Effective C**: https://www.securecoding.cert.org/
-- **String Manipulation in C**: https://www.cplusplus.com/reference/cstring/
-- **Memory Management in C**: https://www.geeksforgeeks.org/memory-management-in-c/
-- **Linked Lists Tutorial**: https://www.programiz.com/dsa/linked-list
 
 ### 42 Madrid Recursos
 
@@ -326,25 +310,11 @@ Durante el desarrollo de este proyecto, se utilizó asistencia de IA en las sigu
 ### Procesos Híbridos
 
 - **Makefile**: Estructura con asistencia, pero optimizado y validado manualmente
-- **Estructura de archivos**: Planificación con IA, implementación manual según normas 42
 
 ---
 
 ## Notas sobre la Implementación
 
-### Decisiones Técnicas
-
-1. **Gestión de Memoria**: Se implementó `ft_calloc` para manejar asignación de memoria inicializada
-2. **Strings Dinámicas**: Funciones como `ft_strjoin`, `ft_substr` retornan memoria dinámica (responsabilidad del usuario liberarla)
-3. **Listas Enlazadas**: Estructura genérica `t_list` que permite almacenar cualquier tipo de dato
-4. **File Descriptors**: Las funciones de salida usan file descriptors para flexibilidad (stdout=1, stderr=2)
-
-### Limitaciones y Consideraciones
-
-- Las funciones asumen entrada válida (validación mínima para mantener conformidad con libc)
-- La gestión de errores sigue el modelo de libc (return NULL, errno, etc.)
-- Las funciones de string no verifican buffer overflow (responsabilidad del usuario)
-- No se incluyen funciones variádicas (printf, scanf) en esta versión
 
 ### Cumplimiento de Normas
 
