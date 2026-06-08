@@ -217,26 +217,6 @@ Durante el desarrollo de este proyecto, se utilizó asistencia de IA en las sigu
 3. **Optimización y Revisión de Código** ✅
    - Sugerencias de mejoras en eficiencia
    - Validación de edge cases
-   - Revisión de cumplimiento con normas C estándar
-
-### Tareas sin Asistencia de IA (Implementación)
-
-1. **Implementación de Funciones** ❌
-   - Todo el código de las funciones ha sido implementado manualmente
-   - Gestión de memoria y punteros desarrollado por el estudiante
-   - Manejo de edge cases codificado directamente
-
-2. **Diseño de Arquitectura** ❌
-   - Estructura del proyecto definida según especificaciones 42
-   - Decisiones de diseño tomadas independientemente
-
-3. **Compilación y Testing Manual** ❌
-   - Pruebas exhaustivas realizadas manualmente
-   - Validación de compilación sin warnings
-
-### Procesos Híbridos
-
-- **Makefile**: Estructura con asistencia, pero optimizado y validado manualmente
 
 ---
 
