@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:15:12 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/08 08:31:15 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/08 15:37:04 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char			*s;
 	unsigned int	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s = (char *) malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!s)
 		return (NULL);
