@@ -31,10 +31,11 @@ $(NAME): $(OBJECTS)
 all: $(NAME)
 
 clean: 
-	$(RM) $(OBJECTS)
+	@echo "Cleaning...."
+	@$(RM) $(OBJECTS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re:	fclean all
 
