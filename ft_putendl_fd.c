@@ -6,7 +6,7 @@
 /*   By: pnarvaez <pnarvaez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 11:05:18 by pnarvaez          #+#    #+#             */
-/*   Updated: 2026/06/03 11:09:00 by pnarvaez         ###   ########.fr       */
+/*   Updated: 2026/06/08 15:38:21 by pnarvaez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
