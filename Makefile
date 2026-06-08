@@ -13,20 +13,17 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 
 OBJECTS = $(SOURCES:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar rc
-RN = ranlib
+AR = ar rcs
 RM = rm -f
 
-.c.o:
+%.o:%.c
 	@$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
-# Make 
 $(NAME): $(OBJECTS)
 	@echo "Compiling...."
 	@$(AR) $(NAME) $(OBJECTS)
-	@${RN} ${NAME}
 
 all: $(NAME)
 
